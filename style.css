@@ -1,0 +1,29 @@
+/* Style the search input */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the results container */
+#results {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Individual result item style */
+#results div {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Highlight the matched text in results */
+.highlight {
+    background-color: #ffff99;
+}
