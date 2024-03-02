@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <div id="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total Price: <span id="total-price">$0</span></p>
+      <button onclick="checkout()">Checkout</button>
+  </div>
+    
+    
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-blue-900 mb-4 md:mb-0">
+            <svg xmlns="15.jpg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-yellow p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">WISHCART</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900"href="men.html">Men</a>
+            <a class="mr-5 hover:text-gray-900"href="women.html">Women</a>
+            <a class="mr-5 hover:text-gray-900"href="kids.html">Kids</a>
+            <a class="mr-5 hover:text-gray-900"href="electronics.html">Electronics</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sale
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex justify-center mt-8">
+          <input type="searchInput" id="searchInput" placeholder="Search" class="w-64 px-4 py-2 border rounded-lg">
+      </div>
+      </header>
+</head>
+<body>
+ 
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="1.jpg">
+            <button onclick="addToCart('Blue Jeans',16 )">Add to Cart</button>
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Blue Jeans</h2>
+            <p class="mt-1">$16.00</p>
+            <button onclick="addToCart('Blue Jeans',16 )">Add to Cart</button>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="2.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Black jeans</h2>
+
+            <p class="mt-1">$21.15</p>
+            <button onclick="addToCart('Blue Jeans',16 )">Add to Cart</button>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="3.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">T-shirt</h2>
+            <p class="mt-1">$12.00</p>
+            <button onclick="addToCart('Blue Jeans',16 )">Add to Cart</button>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="4.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">T-shirts</h2>
+            <p class="mt-1">$18.40</p>
+            <button onclick="addToCart('Blue Jeans',16 )">Add to Cart</button>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="5.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">blue dress</h2>
+            <p class="mt-1">$16.00</p>
+            <button onclick="addToCart('Blue Jeans',16 )">Add to Cart</button>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="8.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">yellow dress</h2>
+            <p class="mt-1">$21.15</p>
+            <button onclick="addToCart('Blue Jeans',16 )">Add to Cart</button>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="6.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Brown dress</h2>
+            <p class="mt-1">$12.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="7.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">green dress</h2>
+            <p class="mt-1">$18.40</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+<body>
+  <script>
+    // Initialize cart
+    const cart = [];
+
+    // Function to add a product to the cart
+    function addToCart(productName, price) {
+        cart.push({ name: productName, price: price });
+        updateCart();
+    }
+
+    // Function to update cart display
+    function updateCart() {
+        const cartItems = document.getElementById('cart-items');
+        const totalPrice = document.getElementById('total-price');
+        cartItems.innerHTML = '';
+        let total = 0;
+
+        cart.forEach(item => {
+            cartItems.innerHTML += `<li>${item.name} - $${item.price}</li>`;
+            total += item.price;
+        });
+
+        totalPrice.textContent = `$${total}`;
+    }
+
+    // Function to simulate checkout (you'll replace this with actual payment processing)
+    function checkout() {
+        alert('Thank you for your purchase!');
+        cart.length = 0; // Clear the cart
+        updateCart();
+    }
+</script>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="9.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">kids Wear</h2>
+            <p class="mt-1">$16.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="10.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Kids Wear</h2>
+            <p class="mt-1">$21.15</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="11.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Kids wear</h2>
+            <p class="mt-1">$12.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="12.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Kids Wear</h2>
+            <p class="mt-1">$18.40</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="16.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Keyboard</h2>
+            <p class="mt-1">$16.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="15.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Laptop</h2>
+            <p class="mt-1">$21.15</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="13.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Gaming Laptop</h2>
+            <p class="mt-1">$12.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="14.jpg">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mouse</h2>
+            <p class="mt-1">$18.40</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total Price: <span id="total-price">$0</span></p>
+      <button onclick="checkout()">Checkout</button>
+  </div>
+  </section>
+</body>
+</html>
